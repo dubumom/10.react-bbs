@@ -11,7 +11,7 @@ function BoardList(props){
   const navigate = useNavigate(); //페이지 이동 함수를 객체로 담고
 
   let getList = () => {
-    Axios.get('http://34.64.209.67:8000/list')
+    Axios.get('http://localhost:8000/list')
     .then(res => {
       const data = res.data;
       setBoardList(data);
@@ -63,7 +63,7 @@ function BoardList(props){
       boardIdList += `'${item}',`;
     });
     
-    Axios.post('http://34.64.209.67:8000/delete',{
+    Axios.post('http://localhost:8000/delete',{
       boardIdList : boardIdList.substring(0, boardIdList.length -1)
       })
     .then( res => {     
