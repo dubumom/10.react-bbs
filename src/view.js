@@ -12,7 +12,7 @@ function View(){
   })
 
   let detail = () =>{
-    Axios.get(`http://localhost:8000/detail?id=${id}`)
+    Axios.get(`http://34.64.209.67:8000/detail?id=${id}`)
     .then( res => {
       if(res.data.length > 0){
         setForm({
